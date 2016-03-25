@@ -1,0 +1,63 @@
+<html>
+
+<head>
+
+<title>Javascript Practical 3</title>
+
+<script language="javascript" type="text/javascript">
+	function multiply(){
+		a = Number(document.calculator.number1.value);
+		b = Number(document.calculator.number2.value);
+		c = a * b;
+		document.calculator.total.value = c;
+	}
+
+	function addition(){
+		a = Number(document.calculator.number1.value);
+		b = Number(document.calculator.number2.value);
+		c = a + b;
+		document.calculator.total.value = c;
+	}
+
+	function subtraction(){
+		a = Number(document.calculator.number1.value);
+		b = Number(document.calculator.number2.value);
+		c = a - b;
+		document.calculator.total.value = c;
+	}
+
+	function division(){
+		a = Number(document.calculator.number1.value);
+		b = Number(document.calculator.number2.value);
+		c = a / b;
+		document.calculator.total.value = c;
+	}
+
+	function modulus(){
+		a = Number(document.calculator.number1.value);
+		b = Number(document.calculator.number2.value);
+		c = a % b;
+		document.calculator.total.value = c;
+	}
+</script>
+
+</head>
+
+<body>
+<form name="calculator">
+
+	Number 1: <input type="number" name="number1"> <br>
+ 
+	Number 2: <input type="number" name="number2"> <br>
+
+	<input type="button" value="ADD" onclick="javascript:addition();">
+	<input type="button" value="SUB" onclick="javascript:subtraction();">
+	<input type="button" value="MUL" onclick="javascript:multiply();">
+	<input type="button" value="DIV" onclick="javascript:division();">
+	<input type="button" value="MOD" onclick="javascript:modulus();">	<br>
+
+	Result: <input type="text" name="total">
+</form>
+
+</body>
+</html>

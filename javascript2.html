@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Practical 2</title>
+
+	<style type="text/css">
+		table, td{
+			padding: 5px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<input type="number" id="count" name="count" placeholder="e.g. 5, 10, etc.">
+		<input type="button" name="Generate" onclick="generateFibonacci();" value="Submit">		
+	</form>
+	
+	<table id="table_fibo">
+	</table>
+	
+	<script type="text/javascript">
+		var table = document.getElementById('table_fibo');
+
+		function generateFibonacci(){
+			var count = document.getElementById('count').value;
+			var row = table.insertRow(0);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+			cell1.innerHTML = "1";
+			cell2.innerHTML = "2";
+
+			if(count<3 || count >100){
+				alert("Please enter a number between 3 to 100");
+			} else{
+				var a = 1;
+				var b = 1;
+				var c = a + b;
+				for(var i = 3 ; i <= count ; i++ ){
+					var cell = row.insertCell(-1);
+					cell.innerHTML = c;	
+					a = b;
+					b = c;
+					c = a + b;
+					if(i%5 === 0){
+						 row = table.insertRow(-1);
+					}
+				}
+			}
+		}
+	</script>
+</body>
+</html>

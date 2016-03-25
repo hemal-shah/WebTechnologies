@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Practical 1</title>
+	<script type="text/javascript">
+		function addBookToUnorderedList(){
+			var stringToAdd = document.getElementById('bookName').value;
+			if(stringToAdd !== ""){
+				var ul = document.getElementById('list');
+				var li = document.createElement('li');
+				li.appendChild(document.createTextNode(stringToAdd));
+				ul.appendChild(li);
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="bookName" name="bookName" placeholder="Book Name">
+	<input type="button" name="buttonAdd" value="Add!" onclick="addBookToUnorderedList();">
+	
+	<ul id="list"></ul>
+</body>
+</html>

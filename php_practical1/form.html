@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PHP practical 1</title>
+</head>
+<body>
+	<form action="php1.php" method="post" style="width: 70%; padding-left:15%">
+		<fieldset>
+		<legend>Student's Detail</legend>
+
+		<table>
+			<tr>
+				<td>
+					First Name:
+				</td>
+				<td>
+					<input type="text" name="firstname" maxlength="15" autofocus required>
+				</td>
+			</tr>
+
+			<tr>	
+				<td>
+					Middle Name:
+				</td>
+				<td>
+					<input type="text" name="middlename" maxlength="15" required>
+				</td>
+			</tr>
+
+			<tr>	
+				<td>
+					Last Name:
+				</td>
+				<td>	
+					<input type="text" name="lastname" maxlength="15" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Gender:
+				</td>
+				<td>
+					<input type="radio" name="gender" value="male" checked="true">Male
+					<input type="radio" name="gender" value="female">Female
+					<input type="radio" name="gender" value="other">Other
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					Date of Birth:
+				</td>
+				<td>
+					<input type="date" name="date_of_birth" max="1998-03-01">
+				</td>
+			</tr>
+		</table>
+	</fieldset>	
+	
+	<!-- Defining this fieldset to retrieve student's contact information -->
+	<fieldset>
+		<legend>Contact Information</legend>
+
+		<table>
+			<tr>
+				<td>
+					Contact Number (1):
+				</td>
+				<td>
+					<input type="text" name="contact_number_1" maxlength="10" pattern="[0-9]{10}" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Contact Number (2):
+				</td>
+				<td>
+					<input type="text" name="contact_number_2" pattern="[0-9]{10}" maxlength="10">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					Email Address:
+				</td>
+				<td>
+					<input type="email" name="email_address" required>
+				</td>
+			</tr>
+		</table>
+
+	</fieldset>
+
+
+	<!-- Taking student's college information -->
+	<fieldset>
+		<legend>College Information</legend>
+		<table>
+
+			<tr>
+				<td>
+					Enrollment Number:
+				</td>
+				<td>
+					<input type="text" name="enrollment_number"  maxlength="12" pattern="[0-9]{12}" requiredx>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					College Name:
+				</td>
+				<td>
+					<input list="college_name" name="college_name">
+					<datalist id="college_name">
+						<option value="Vishwakarma Government Engineering College">
+						<option value="L. D. College of Engineering">
+						<option value="G. E. C., Gandhinagar">
+						<option value="Nirma University">
+						<option value="G. E. C., Godhra">
+						<option value="G. E. C., Rajkot">
+					</datalist>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					Semester:
+				</td>
+				<td>
+					<input list="semesters" name="semesters">
+					<datalist id="semesters">
+						<option value="1">
+						<option value="2">
+						<option value="3">
+						<option value="4">
+						<option value="5">
+						<option value="6">
+						<option value="7">
+						<option value="8">
+					</datalist>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					Field:
+				</td>
+				<td>
+					<input list="field" name="field">
+					<datalist id="field">
+						<option value="Computer">
+						<option value="Civil">
+						<option value="IT">
+						<option value="Mechanical">
+						<option value="Power">
+						<option value="EC">
+						<option value="Electrical">
+						<option value="IC">
+						<option value="Chemical">
+					</datalist>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+
+	<!-- User address and ask if interested in hostel admission -->
+	<fieldset>
+		<legend>Address</legend>
+		<table>
+			<tr>
+				<td>
+					Address:
+				</td>
+				<td>
+					<textarea name="address_student" rows="5" cols="30" placeholder="Your address."></textarea>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					Hostel Required?
+				</td>
+				<td>
+					<input type="radio" name="hostel" value="yes">Yes
+					<input type="radio" name="hostel" value="no">No
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+
+	<input type="submit">
+
+	</form>
+</body>
+</html>
